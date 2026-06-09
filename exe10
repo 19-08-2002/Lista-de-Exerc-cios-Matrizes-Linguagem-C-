@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int matriz1[3][3];
+    int matriz2[3][3];
+    int i, j;
+    int iguais = 1;
+
+    printf("Digite os valores da primeira matriz:\n");
+
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            scanf("%d", &matriz1[i][j]);
+        }
+    }
+
+    printf("Digite os valores da segunda matriz:\n");
+
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            scanf("%d", &matriz2[i][j]);
+        }
+    }
+
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            if(matriz1[i][j] != matriz2[i][j]) {
+                iguais = 0;
+            }
+        }
+    }
+
+    if(iguais == 1) {
+        printf("As matrizes sao iguais.\n");
+    } else {
+        printf("As matrizes sao diferentes.\n");
+    }
+
+    return 0;
+}
