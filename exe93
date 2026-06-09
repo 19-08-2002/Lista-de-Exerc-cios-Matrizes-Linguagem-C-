@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main() {
+    int matriz1[3][3];
+    int matriz2[3][3];
+    int resultado[3][3];
+    int i, j, k;
+
+    printf("Digite os valores da primeira matriz:\n");
+
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            scanf("%d", &matriz1[i][j]);
+        }
+    }
+
+    printf("Digite os valores da segunda matriz:\n");
+
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            scanf("%d", &matriz2[i][j]);
+        }
+    }
+
+
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            resultado[i][j] = 0;
+        }
+    }
+
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            for(k = 0; k < 3; k++) {
+                resultado[i][j] += matriz1[i][k] * matriz2[k][j];
+            }
+        }
+    }
+
+    printf("Matriz resultado:\n");
+
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            printf("%d\t", resultado[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
